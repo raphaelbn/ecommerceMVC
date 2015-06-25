@@ -20,7 +20,7 @@
   <mvc:annotation-driven />
   
   <!-- Define pagina inicial (ingnora a configuração do web.xml)--> 
-  <mvc:view-controller path="/" view-name="login/formulario-login"/> 
+  <mvc:view-controller path="/" view-name="/login/formulario-login"/> 
   
   <!-- Define onde está localizada as views da aplicação, e qual a extenção das mesmas --> 
   <!-- Estão configuradas dentro da WEB-INF para que o usuário não possa acessalas, se não por meio do mapeamento -->

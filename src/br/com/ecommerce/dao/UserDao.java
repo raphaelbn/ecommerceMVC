@@ -15,10 +15,10 @@ public class UserDao {
 		this.connection = connection;
 	}
 	public boolean cadastrado(User usuario) {
-		String str = "select * from Usuarios where usuario=? and login =?";
+		String str = "select * from User where usuario=? and senha =?";
 		try {
 			PreparedStatement ps = this.connection.prepareStatement(str);
-			ps.setString(1, usuario.getNome());
+			ps.setString(1, usuario.getUsuario());
 			ps.setString(2, usuario.getSenha());
 			
 			ResultSet rs = ps.executeQuery();

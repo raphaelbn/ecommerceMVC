@@ -10,7 +10,7 @@ public class ConnectionFactory {
 		try {
 			DriverManager.registerDriver(new com.mysql.jdbc.Driver());
 			return DriverManager.getConnection(
-					"jdbc:mysql://localhost/e-Commerce", "root", "");
+					"jdbc:mysql://localhost/ecommerce", "root", "");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			throw new RuntimeException(e);

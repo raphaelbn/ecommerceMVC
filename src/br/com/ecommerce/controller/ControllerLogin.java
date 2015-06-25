@@ -1,4 +1,4 @@
-package br.com.ecommerce.controler;
+package br.com.ecommerce.controller;
 
 import javax.servlet.http.HttpSession;
 
@@ -9,11 +9,11 @@ import br.com.ecommerce.exceptions.UserNotRegistered;
 import br.com.ecommerce.modelo.User;
 
 @Controller
-public class ControlerLogin {
+public class ControllerLogin {
 
 	@RequestMapping("/login")
 	public String loginForm() {
-		return "formulario-login";
+		return "login/formulario-login";
 	}
 	
 	@RequestMapping("/auditLogin")
@@ -24,9 +24,11 @@ public class ControlerLogin {
 			
 			session.setAttribute("usuarioLogado", usuario);
 			
+			System.out.println(usuario.getUsuario());
+			
 		} catch (UserNotRegistered e) {
 			e.printStackTrace();
 		}
-		return "menu";
+		return "menu/menu";
 	}
 }

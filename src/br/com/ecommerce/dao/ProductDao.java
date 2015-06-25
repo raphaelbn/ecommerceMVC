@@ -16,7 +16,7 @@ private Connection connection;
 	}
 	
 	public void addProduto(Product produto) {
-String str = "insert into product(nome,tipo,descricao,valor) values('?','?','?','?')";
+String str = "insert into Product(nome,tipo,descricao,valor) values('?','?','?','?')";
 		
 		try {
 			PreparedStatement pstmt = connection.prepareStatement(str);
@@ -35,7 +35,7 @@ String str = "insert into product(nome,tipo,descricao,valor) values('?','?','?',
 	}
 	
 	public void addTipo(ProductType tipo) {
-		String str = "insert into product_type(nome,descricao) values(?,?)";
+		String str = "insert into ProductType(nome,descricao) values(?,?)";
 		
 		try {
 			PreparedStatement pstmt = connection.prepareStatement(str);

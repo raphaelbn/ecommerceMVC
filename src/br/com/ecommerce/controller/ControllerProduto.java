@@ -1,4 +1,4 @@
-package br.com.ecommerce.controler;
+package br.com.ecommerce.controller;
 
 
 public class ControllerProduto {
